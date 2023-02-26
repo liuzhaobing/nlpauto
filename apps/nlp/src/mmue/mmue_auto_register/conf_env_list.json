@@ -1,0 +1,61 @@
+{
+  "env_label": "sit134",
+  "mmue": {
+    "dit87": {
+      "base_url": "https://mmue-dit87.harix.iamidata.com",
+      "username": "admin",
+      "password": "123456",
+      "timezone": "UTC+8",
+      "longitude": "104.061",
+      "latitude": "30.5444",
+      "language": "zh-CN",
+      "tenant_code": "CloudMinds_RDP",
+      "dm_name": "standard",
+      "scenetplid": "1",
+      "scenecharid": "32",
+      "skilltplid": "1"
+    },
+    "fit86": {
+      "base_url": "https://mmue-fit86.harix.iamidata.com",
+      "username": "admin",
+      "password": "123456",
+      "timezone": "UTC+8",
+      "longitude": "104.061",
+      "latitude": "30.5444",
+      "language": "zh-CN",
+      "tenant_code": "CloudMinds_RDP",
+      "dm_name": "standard",
+      "scenetplid": "1",
+      "scenecharid": "32",
+      "skilltplid": "1"
+    },
+    "sit134": {
+      "base_url": "https://mmue-sit134.harix.iamidata.com",
+      "username": "admin",
+      "password": "123456",
+      "timezone": "UTC+8",
+      "longitude": "104.061",
+      "latitude": "30.5444",
+      "language": "zh-CN",
+      "tenant_code": "CloudMinds_RDP",
+      "dm_name": "standard",
+      "scenetplid": "1",
+      "scenecharid": "50",
+      "skilltplid": "3"
+    },
+    "221": {
+      "base_url": "",
+      "username": "",
+      "password": "",
+      "timezone": "UTC+8",
+      "longitude": "104.061",
+      "latitude": "30.5444",
+      "language": "zh-CN",
+      "tenant_code": "CloudMinds_RDP",
+      "dm_name": "standard",
+      "scenetplid": "1",
+      "scenecharid": "11",
+      "skilltplid": "1"
+    }
+  }
+}

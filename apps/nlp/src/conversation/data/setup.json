@@ -1,0 +1,42 @@
+[
+  {
+    "domain": "poetry",
+    "smartvoice_json": "sv_poetry.json",
+    "conversation_json": "corpus_poetry.json"
+  },
+  {
+    "domain": "weather",
+    "smartvoice_json": "sv_weather.json",
+    "conversation_json": "corpus_weather.json"
+  },
+  {
+    "domain": "music",
+    "smartvoice_json": "sv_music.json",
+    "conversation_json": "corpus_music.json"
+  },
+  {
+    "domain": "times",
+    "smartvoice_json": "sv_times.json",
+    "conversation_json": "corpus_times.json"
+  },
+  {
+    "domain": "stock",
+    "smartvoice_json": "sv_stock.json",
+    "conversation_json": "corpus_stock.json"
+  },
+  {
+    "domain": "currency",
+    "smartvoice_json": "sv_currency.json",
+    "conversation_json": "corpus_currency.json"
+  },
+  {
+    "domain": "crosstalk",
+    "smartvoice_json": "sv_crosstalk.json",
+    "conversation_json": "corpus_crosstalk.json"
+  },
+  {
+    "domain": "storytelling",
+    "smartvoice_json": "sv_storytelling.json",
+    "conversation_json": "corpus_storytelling.json"
+  }
+]

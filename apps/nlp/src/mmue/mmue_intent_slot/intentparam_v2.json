@@ -1,0 +1,2406 @@
+{
+  "protocol_version": "v1.0",
+  "default_domain": 1,
+  "default_intent": "other",
+  "domains": [
+    {
+      "id": 0,
+      "name": "food",
+      "redirect": 35
+    },
+    {
+      "id": 1,
+      "name": "other",
+      "model_type": -1
+    },
+    {
+      "id": 2,
+      "name": "music",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.entity.singer:singer",
+        "sys.entity.song:song:2:1",
+        "sys.entity.song_type:song_type:3:1",
+        "sys.entity.robot_name:robot_name:3:1"
+      ],
+      "allowed_entity_type1": [
+        "singer",
+        "song:2:1",
+        "song_type:3:1",
+        "robot_name:3:1"
+      ],
+      "allowed_context": [
+        "",
+        "music"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "SongByName",
+          "enable": true,
+          "slots": [
+            "song"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 1,
+          "name": "SongBySinger",
+          "enable": true,
+          "slots": [
+            "singer",
+            "song_type"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 2,
+          "name": "SongByNameAndSinger",
+          "enable": true,
+          "slots": [
+            "singer",
+            "song",
+            "song_type"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 3,
+          "name": "SongRandomly",
+          "enable": true,
+          "slots": [
+            "song_type"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 4,
+          "name": "CanSing",
+          "enable": true,
+          "slots": [
+            "song",
+            "singer",
+            "song_type"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 5,
+          "name": "SingAnthorSong",
+          "enable": true,
+          "slots": [
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 6,
+          "name": "isPlayingSong",
+          "enable": true,
+          "slots": [
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 7,
+          "name": "isPlayingSinger",
+          "enable": true,
+          "slots": [
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 8,
+          "name": "SingerComposition",
+          "enable": true,
+          "slots": [
+            "singer",
+            "song_type"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 9,
+          "name": "other",
+          "enable": true,
+          "slots": [
+          ],
+          "actions": [
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "weather_new",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.date:date",
+        "sys.entity.city:city:3:4",
+        "sys.entity.time-period:period",
+        "sys.date-duration:duration",
+        "sys.entity.province:province",
+        "sys.entity.country:country"
+      ],
+      "allowed_entity_type1": [
+        "date",
+        "city:3:4",
+        "period",
+        "duration",
+        "province",
+        "country"
+      ],
+      "allowed_context": [
+        "other",
+        "livingindex",
+        "washingindex",
+        "dressingindex",
+        "exerciseindex",
+        "humidity",
+        "temperature",
+        "hailstone",
+        "thunder",
+        "rain",
+        "wind",
+        "pollution",
+        "snow",
+        "uvindex",
+        "weather"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "WeatherForProvince",
+          "enable": true,
+          "slots": [
+            "province",
+            "date",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "GetLivingIndex_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 2,
+          "name": "GetLivingIndex",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 3,
+          "name": "GetWashingIndex_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 4,
+          "name": "GetWashingIndex",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 5,
+          "name": "GetDressingIndex_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 6,
+          "name": "GetDressingIndex",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 7,
+          "name": "GetExerciseIndex_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 8,
+          "name": "GetExerciseIndex",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 9,
+          "name": "GetHumidity_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 10,
+          "name": "GetHumidity",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 11,
+          "name": "GetTemperature_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 12,
+          "name": "GetTemperature",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 13,
+          "name": "GetHailstone_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 14,
+          "name": "GetHailstone",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 15,
+          "name": "GetThunder_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 16,
+          "name": "GetThunder",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 17,
+          "name": "GetRain_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 18,
+          "name": "GetRain",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 19,
+          "name": "GetWind_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 20,
+          "name": "GetWind",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 21,
+          "name": "GetPollution_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 22,
+          "name": "GetPollution",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 23,
+          "name": "GetWeather_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration",
+            "country"
+          ],
+          "actions": []
+        },
+        {
+          "id": 24,
+          "name": "GetWeather",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration",
+            "country"
+          ],
+          "actions": []
+        },
+        {
+          "id": 25,
+          "name": "GetSnow",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 26,
+          "name": "GetSnow_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 27,
+          "name": "GetUvIndex",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 28,
+          "name": "GetUvIndex_Followup",
+          "enable": true,
+          "slots": [
+            "date",
+            "city",
+            "duration"
+          ],
+          "actions": []
+        },
+        {
+          "id": 29,
+          "name": "other",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "news_local",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.entity.news_keywords:ntype",
+        "sys.date:datetime"
+      ],
+      "allowed_entity_type1": [
+        "ntype",
+        "datetime"
+      ],
+      "allowed_context": [
+        "",
+        "news"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "GetNews",
+          "enable": true,
+          "slots": [
+            "ntype",
+            "datetime"
+          ],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "GetNextNews",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 2,
+          "name": "GetNewsContent",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 3,
+          "name": "GetHistory",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "flight",
+      "model_type": -1
+    },
+    {
+      "id": 6,
+      "name": "stock",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.entity.stock-code:stockid",
+        "sys.entity.stock-picture:picturetype",
+        "sys.entity.stock_index:stock_index",
+        "sys.entity.company:stockid",
+        "sys.date:date"
+      ],
+      "allowed_entity_type1": [
+        "stockid",
+        "picturetype",
+        "stock_index",
+        "date"
+      ],
+      "allowed_context": [
+        "other"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "GetNewsPredict",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "GetPredict",
+          "redirect": 4
+        },
+        {
+          "id": 2,
+          "name": "GetPicture",
+          "enable": true,
+          "slots": [
+            "stockid",
+            "picturetype"
+          ],
+          "actions": []
+        },
+        {
+          "id": 3,
+          "name": "GetMarket",
+          "enable": true,
+          "slots": [
+            "stock_index"
+          ],
+          "actions": []
+        },
+        {
+          "id": 4,
+          "name": "GetStock",
+          "enable": true,
+          "slots": [
+            "stockid",
+            "date"
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "navigation",
+      "redirect": 35
+    },
+    {
+      "id": 8,
+      "name": "trafficrestr",
+      "model_type": 2,
+      "allowed_entity_type": [
+        "sys.date:date",
+        "sys.entity.city:city"
+      ],
+      "allowed_entity_type1": [
+        "date",
+        "city"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "GetNumber",
+          "enable": true,
+          "slots": [
+            "date",
+            "city"
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "poetry",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.entity.poetry-type:type",
+        "sys.entity.poetry-authorname:authorname",
+        "sys.entity.poetry-title:title",
+        "sys.entity.poetry-content:content"
+      ],
+      "allowed_entity_type1": [
+        "type",
+        "authorname",
+        "title",
+        "content"
+      ],
+      "allowed_context": [
+        ""
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "GetNextPhrases",
+          "enable": true,
+          "slots": [
+            "content"
+          ],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "GetLastPhrases",
+          "enable": true,
+          "slots": [
+            "content"
+          ],
+          "actions": []
+        },
+        {
+          "id": 2,
+          "name": "GetAuthorNames",
+          "enable": true,
+          "slots": [
+            "title",
+            "content"
+          ],
+          "actions": []
+        },
+        {
+          "id": 3,
+          "name": "GetTitles",
+          "enable": true,
+          "slots": [
+            "content"
+          ],
+          "actions": []
+        },
+        {
+          "id": 4,
+          "name": "GetOnePoetry",
+          "enable": true,
+          "slots": [
+            "type",
+            "authorname"
+          ],
+          "actions": []
+        },
+        {
+          "id": 5,
+          "name": "GetPoetryByTitle",
+          "enable": true,
+          "slots": [
+            "title",
+            "authorname"
+          ],
+          "actions": []
+        },
+        {
+          "id": 6,
+          "name": "GetAuthors",
+          "enable": true,
+          "slots": [
+            "title",
+            "authorname"
+          ],
+          "actions": []
+        },
+        {
+          "id": 7,
+          "name": "GetTranslates",
+          "enable": true,
+          "slots": [
+            "title",
+            "authorname",
+            "content"
+          ],
+          "actions": []
+        },
+        {
+          "id": 8,
+          "name": "GetMasterpiece",
+          "enable": true,
+          "slots": [
+            "type",
+            "authorname"
+          ],
+          "actions": []
+        },
+        {
+          "id": 9,
+          "name": "GetDynasty",
+          "enable": true,
+          "slots": [
+            "authorname"
+          ],
+          "actions": []
+        },
+        {
+          "id": 10,
+          "name": "other",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 11,
+          "name": "oneMorePoetry",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "search",
+      "model_type": -1
+    },
+    {
+      "id": 11,
+      "name": "crosstalk",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.entity.crosstalk_performer:performer1",
+        "sys.entity.crosstalk_performer:performer2",
+        "sys.entity.crosstalk_title:title"
+      ],
+      "allowed_entity_type1": [
+        "performer1",
+        "title",
+        "performer2"
+      ],
+      "allowed_context": [
+        "",
+        "crosstalk"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "RandomCrosstalk",
+          "enable": true,
+          "slots": [
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 1,
+          "name": "GetByTitle",
+          "enable": true,
+          "slots": [
+            "title"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 2,
+          "name": "GetByPerformer",
+          "enable": true,
+          "slots": [
+            "performer1",
+            "performer2"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 3,
+          "name": "GetByNameAndPerformer",
+          "enable": true,
+          "slots": [
+            "performer1",
+            "title",
+            "performer2"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 4,
+          "name": "AgainCrosstalk",
+          "enable": true,
+          "slots": [],
+          "actions": [
+          ]
+        },
+        {
+          "id": 5,
+          "name": "other",
+          "enable": true,
+          "slots": [
+          ],
+          "actions": [
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "compute",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.compute:compute"
+      ],
+      "allowed_entity_type1": [
+        "compute"
+      ],
+      "allowed_context": [
+        ""
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "Computer",
+          "enable": true,
+          "slots": [
+            "compute"
+          ],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "other",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "dance_action",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.entity.can_dance:dance_name",
+        "sys.entity.can_not_dance:can_not_dance",
+        "sys.unit-angle:angle",
+        "sys.entity.angle:eangle",
+        "sys.unit-length:dist",
+        "sys.entity.dist:edist",
+        "sys.entity.direction:direction",
+        "sys.entity.head_angle:eangle"
+      ],
+      "allowed_entity_type1": [
+        "dance_name",
+        "can_not_dance",
+        "angle",
+        "eangle",
+        "dist",
+        "edist",
+        "direction"
+      ],
+      "allowed_context": [
+        ""
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "cloudminds/bow",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "cm_dance",
+          "rename_domain": "dance",
+          "enable": true,
+          "slots": [
+            "dance_name"
+          ],
+          "actions": []
+        },
+        {
+          "id": 2,
+          "name": "cloudminds/hand",
+          "enable": true,
+          "slots": [
+            "direction"
+          ],
+          "actions": []
+        },
+        {
+          "id": 3,
+          "name": "cloudminds/hug",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 4,
+          "name": "cloudminds/vposeleft",
+          "rename_domain": "dance_photo",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 5,
+          "name": "cloudminds/groupphoto",
+          "rename_domain": "dance_photo",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 6,
+          "name": "cloudminds/fistbump",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 7,
+          "name": "cloudminds/bye",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 8,
+          "name": "cloudminds/welcome",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 9,
+          "name": "cloudminds/aerobics",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 10,
+          "name": "cloudminds/naughty",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 11,
+          "name": "cloudminds/finger",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 12,
+          "name": "cloudminds/kiss",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 13,
+          "name": "cloudminds/claps",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 14,
+          "name": "other",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 15,
+          "name": "cloudminds/sitdown",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 16,
+          "name": "cloudminds/standup",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 17,
+          "name": "cloudminds/get",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 18,
+          "name": "can_dance",
+          "rename_domain": "dance",
+          "enable": true,
+          "slots": [
+            "dance_name"
+          ],
+          "actions": []
+        },
+        {
+          "id": 19,
+          "name": "cloudminds/shakehead",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 20,
+          "name": "cloudminds/nod",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 21,
+          "name": "cloudminds/salute",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 22,
+          "name": "cloudminds/turnright",
+          "rename_domain": "dance_move",
+          "enable": true,
+          "slots": [
+            "eangle",
+            "angle"
+          ],
+          "actions": []
+        },
+        {
+          "id": 23,
+          "name": "cloudminds/turnleft",
+          "rename_domain": "dance_move",
+          "enable": true,
+          "slots": [
+            "eangle",
+            "angle"
+          ],
+          "actions": []
+        },
+        {
+          "id": 24,
+          "name": "MoveBack",
+          "rename_domain": "dance_move",
+          "enable": true,
+          "slots": [
+            "dist",
+            "edist"
+          ],
+          "actions": []
+        },
+        {
+          "id": 25,
+          "name": "MoveForward",
+          "rename_domain": "dance_move",
+          "enable": true,
+          "slots": [
+            "dist",
+            "edist"
+          ],
+          "actions": []
+        },
+        {
+          "id": 26,
+          "name": "MoveLeft",
+          "rename_domain": "dance_move",
+          "enable": true,
+          "slots": [
+            "dist",
+            "edist"
+          ],
+          "actions": []
+        },
+        {
+          "id": 27,
+          "name": "MoveRight",
+          "rename_domain": "dance_move",
+          "enable": true,
+          "slots": [
+            "dist",
+            "edist"
+          ],
+          "actions": []
+        },
+        {
+          "id": 28,
+          "name": "cloudminds/headturnright",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 29,
+          "name": "cloudminds/handheart",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 30,
+          "name": "cloudminds/jump",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 31,
+          "name": "cloudminds/headup",
+          "enable": true,
+          "slots": [
+            "eangle"
+          ],
+          "actions": []
+        },
+        {
+          "id": 32,
+          "name": "cloudminds/headdown",
+          "enable": true,
+          "slots": [
+            "eangle"
+          ],
+          "actions": []
+        },
+        {
+          "id": 33,
+          "name": "cloudminds/headturnleft",
+          "enable": true,
+          "slots": [
+            "eangle"
+          ],
+          "actions": []
+        },
+        {
+          "id": 34,
+          "name": "cloudminds/headturnleft90",
+          "enable": true,
+          "slots": [
+            "eangle"
+          ],
+          "actions": []
+        },
+        {
+          "id": 35,
+          "name": "cloudminds/headturnright90",
+          "enable": true,
+          "slots": [
+            "eangle"
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "times",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.date:date",
+        "sys.year:year",
+        "sys.entity.season:season",
+        "sys.entity.zodiac:zodiac",
+        "sys.entity.weekday:weekday:2:2",
+        "sys.entity.city:city",
+        "sys.entity.country:country",
+        "sys.entity.timezone:timezone",
+        "sys.time:time",
+        "sys.entity.solarterms:solarterm",
+        "sys.entity.holiday:holiday",
+        "sys.entity.orientation:orientation",
+        "sys.number:number",
+        "sys.entity.time_scope:timescope",
+        "sys.entity.festival_type:festival_type"
+      ],
+      "allowed_entity_type1": [
+        "date",
+        "year",
+        "season",
+        "zodiac",
+        "weekday:2:2",
+        "city",
+        "country",
+        "timezone",
+        "time",
+        "solarterm",
+        "holiday",
+        "orientation",
+        "number",
+        "timescope",
+        "festival_type"
+      ],
+      "allowed_context": [
+        "",
+        "TimeZone",
+        "GetHoliday",
+        "CheckTime",
+        "AskTimeZone"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "GetHoliday",
+          "enable": true,
+          "slots": [
+            "number",
+            "year",
+            "holiday",
+            "orientation",
+            "festival_type"
+          ],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "GetWeekIndex",
+          "enable": true,
+          "slots": [
+            "orientation",
+            "timescope"
+          ],
+          "actions": []
+        },
+        {
+          "id": 2,
+          "name": "IsLeapYear",
+          "enable": true,
+          "slots": [
+            "number",
+            "year"
+          ],
+          "actions": []
+        },
+        {
+          "id": 3,
+          "name": "IsHoliday",
+          "enable": true,
+          "slots": [
+            "date"
+          ],
+          "actions": []
+        },
+        {
+          "id": 4,
+          "name": "GetSolartermIndex",
+          "enable": true,
+          "slots": [
+            "solarterm",
+            "orientation",
+            "timescope"
+          ],
+          "actions": []
+        },
+        {
+          "id": 5,
+          "name": "GetYear",
+          "enable": true,
+          "slots": [
+            "number",
+            "year",
+            "orientation",
+            "zodiac"
+          ],
+          "actions": []
+        },
+        {
+          "id": 6,
+          "name": "GetNowTime",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 7,
+          "name": "other",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 8,
+          "name": "GetNowMonth",
+          "enable": true,
+          "slots": [
+            "orientation"
+          ],
+          "actions": []
+        },
+        {
+          "id": 9,
+          "name": "GetDate",
+          "enable": true,
+          "slots": [
+            "date"
+          ],
+          "actions": []
+        },
+        {
+          "id": 10,
+          "name": "CheckTime",
+          "enable": true,
+          "slots": [
+            "time"
+          ],
+          "actions": []
+        },
+        {
+          "id": 11,
+          "name": "GetAllHolidays",
+          "enable": true,
+          "slots": [
+            "number",
+            "year"
+          ],
+          "actions": []
+        },
+        {
+          "id": 12,
+          "name": "GetNowSeason",
+          "enable": true,
+          "slots": [
+            "season",
+            "orientation"
+          ],
+          "actions": []
+        },
+        {
+          "id": 13,
+          "name": "GetHolidayDaysAway",
+          "enable": true,
+          "slots": [
+            "holiday",
+            "festival_type"
+          ],
+          "actions": []
+        },
+        {
+          "id": 14,
+          "name": "TimeZone",
+          "enable": true,
+          "slots": [
+            "time",
+            "country",
+            "city",
+            "timezone"
+          ],
+          "actions": []
+        },
+        {
+          "id": 15,
+          "name": "CheckWeekday",
+          "enable": true,
+          "slots": [
+            "date",
+            "weekday"
+          ],
+          "actions": []
+        },
+        {
+          "id": 16,
+          "name": "GetQuarterIndex",
+          "enable": true,
+          "slots": [
+            "orientation"
+          ],
+          "actions": []
+        },
+        {
+          "id": 17,
+          "name": "GetSolarterm",
+          "enable": true,
+          "slots": [
+            "solarterm"
+          ],
+          "actions": []
+        },
+        {
+          "id": 18,
+          "name": "GetHoliday_followup",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 19,
+          "name": "TimeZone_followup",
+          "enable": true,
+          "slots": [
+            "time",
+            "country",
+            "city",
+            "timezone"
+          ],
+          "actions": []
+        },
+        {
+          "id": 20,
+          "name": "GetLunar",
+          "enable": true,
+          "slots": [
+            "date"
+          ],
+          "actions": []
+        },
+        {
+          "id": 21,
+          "name": "CheckTime_followup",
+          "enable": true,
+          "slots": [
+            "time"
+          ],
+          "actions": []
+        },
+        {
+          "id": 22,
+          "name": "GetWeekDay",
+          "enable": true,
+          "slots": [
+            "date"
+          ],
+          "actions": []
+        },
+        {
+          "id": 23,
+          "name": "IsWorkDay",
+          "enable": true,
+          "slots": [
+            "date",
+            "holiday"
+          ],
+          "actions": []
+        },
+        {
+          "id": 24,
+          "name": "GetSuitAndAvoid",
+          "enable": true,
+          "slots": [
+            "date"
+          ],
+          "actions": []
+        },
+        {
+          "id": 25,
+          "name": "AskTimeZone",
+          "enable": true,
+          "slots": [
+            "country",
+            "city"
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "joke",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.number:joke_id",
+        "sys.entity.joke_type:joke_type"
+      ],
+      "allowed_entity_type1": [
+        "joke_id",
+        "joke_type"
+      ],
+      "allowed_context": [
+        "other",
+        "jokes"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "JokesRandomly",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "JokesAgain",
+          "enable": true,
+          "slots": [
+            "joke_type"
+          ],
+          "actions": []
+        },
+        {
+          "id": 2,
+          "name": "CheckJokesById",
+          "enable": true,
+          "slots": [
+            "joke_id"
+          ],
+          "actions": []
+        },
+        {
+          "id": 3,
+          "name": "Jokes",
+          "enable": true,
+          "slots": [
+            "joke_type"
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "story",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.entity.storytype:story_type",
+        "sys.entity.storyname:story_title"
+      ],
+      "allowed_entity_type1": [
+        "story_type",
+        "story_title"
+      ],
+      "allowed_context": [
+        "",
+        "story"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "Story",
+          "enable": true,
+          "slots": [
+            "story_type",
+            "story_title"
+          ],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "StoryAnother",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 2,
+          "name": "CanStory",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 3,
+          "name": "other",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "meta",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.entity.person_name:person_name"
+      ],
+      "allowed_entity_type1": [
+        "person_name"
+      ],
+      "allowed_context": [
+        ""
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "rememberName",
+          "enable": true,
+          "slots": [
+            "person_name"
+          ],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "ocrRecognition",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 2,
+          "name": "moneyRecognition",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 3,
+          "name": "objectRecognition",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 4,
+          "name": "faceRecognition",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "drama",
+      "model_type": 2,
+      "allowed_entity_type": [
+        "sys.entity.drama_performer:drama_performer",
+        "sys.entity.drama_type:drama_type",
+        "sys.entity.drama_title:drama_title"
+      ],
+      "allowed_entity_type1": [
+        "drama_performer",
+        "drama_type",
+        "drama_title"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "PlayDrama",
+          "enable": true,
+          "slots": [
+            "drama_performer",
+            "drama_type",
+            "drama_title"
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "constellation",
+      "model_type": 2,
+      "allowed_entity_type": [
+        "sys.entity.timeinterval:timeinterval",
+        "sys.entity.star:star",
+        "sys.entity.question:question"
+      ],
+      "allowed_entity_type1": [
+        "timeinterval",
+        "star",
+        "question"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "GetConstellation",
+          "enable": true,
+          "slots": [
+            "timeinterval",
+            "star",
+            "question"
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "translate",
+      "model_type": 2,
+      "allowed_entity_type": [],
+      "intents": [
+        {
+          "id": 0,
+          "name": "Translate",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "move",
+      "redirect": 13
+    },
+    {
+      "id": 22,
+      "name": "storytelling",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.entity.storytelling_performer:performer",
+        "sys.entity.storytelling_title:title",
+        "sys.entity.storytelling_index:index",
+        "sys.entity.storytelling_episode:episode"
+      ],
+      "allowed_entity_type1": [
+        "performer",
+        "title",
+        "index",
+        "episode"
+      ],
+      "allowed_context": [
+        "",
+        "storytelling"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "RandomStorytelling",
+          "enable": true,
+          "slots": [
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 1,
+          "name": "PreStorytelling",
+          "enable": true,
+          "slots": [
+            "performer",
+            "title"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 2,
+          "name": "NextStorytelling",
+          "enable": true,
+          "slots": [
+            "performer",
+            "title",
+            "index",
+            "episode"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 3,
+          "name": "SelectStorytelling",
+          "enable": true,
+          "slots": [
+            "performer",
+            "title",
+            "index",
+            "episode"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 4,
+          "name": "GetByTitle",
+          "enable": true,
+          "slots": [
+            "title"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 5,
+          "name": "GetByPerformerTitleIndex",
+          "enable": true,
+          "slots": [
+            "performer",
+            "title",
+            "index"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 6,
+          "name": "GetByPerformer",
+          "enable": true,
+          "slots": [
+            "performer"
+          ],
+          "actions": [
+          ]
+        },
+        {
+          "id": 7,
+          "name": "other",
+          "enable": true,
+          "slots": [
+          ],
+          "actions": [
+          ]
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "currency",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.entity.currency:currentcy",
+        "sys.number:amount",
+        "sys.entity.fcurrency:fcurrentcy",
+        "sys.entity.tcurrency:tcurrentcy"
+      ],
+      "allowed_entity_type1": [
+        "currentcy",
+        "fcurrentcy",
+        "tcurrentcy",
+        "amount"
+      ],
+      "allowed_context": [
+        "",
+        "SetCurrentcy",
+        "currency"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "SetCurrentcy",
+          "enable": true,
+          "slots": [
+            "currentcy"
+          ],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "GetCurrentcy",
+          "enable": true,
+          "slots": [
+            "fcurrentcy",
+            "tcurrentcy",
+            "amount"
+          ],
+          "actions": []
+        },
+        {
+          "id": 2,
+          "name": "Cancel",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "system",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.number:volume",
+        "sys.percent:percent"
+      ],
+      "allowed_entity_type1": [
+        "volume",
+        "percent"
+      ],
+      "allowed_context": [
+        ""
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "decreaseVolume",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "unmute",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 2,
+          "name": "silenceOn",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 3,
+          "name": "setVolume",
+          "enable": true,
+          "slots": [
+            "volume",
+            "percent"
+          ],
+          "actions": []
+        },
+        {
+          "id": 4,
+          "name": "NormalSpeechRate",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 5,
+          "name": "mute",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 6,
+          "name": "increaseVolume",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 7,
+          "name": "IncreaseSpeechRate",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 8,
+          "name": "getVolume",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 9,
+          "name": "DecreaseSpeechRate",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 10,
+          "name": "powerOffRobot_confirm",
+          "enable": true,
+          "slots": [],
+          "rename_domain": "system_urgent",
+          "actions": []
+        },
+        {
+          "id": 11,
+          "name": "other",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 12,
+          "name": "increaseBrightness",
+          "enable": true,
+          "slots": [
+            "percent"
+          ],
+          "actions": []
+        },
+        {
+          "id": 13,
+          "name": "decreaseBrightness",
+          "enable": true,
+          "slots": [
+            "percent"
+          ],
+          "actions": []
+        },
+        {
+          "id": 14,
+          "name": "turnOffLights",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 15,
+          "name": "turnOnLights",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 16,
+          "name": "openBox",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 17,
+          "name": "closeBox",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 18,
+          "name": "setBrightness",
+          "enable": true,
+          "slots": [
+            "volume",
+            "percent"
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "histoday",
+      "model_type": -1
+    },
+    {
+      "id": 26,
+      "name": "zodiac",
+      "model_type": -1
+    },
+    {
+      "id": 27,
+      "name": "hospital",
+      "model_type": -1
+    },
+    {
+      "id": 28,
+      "name": "weibo",
+      "model_type": -1
+    },
+    {
+      "id": 29,
+      "name": "zhou_interprets",
+      "model_type": -1
+    },
+    {
+      "id": 30,
+      "name": "estate",
+      "model_type": -1
+    },
+    {
+      "id": 31,
+      "name": "footballmatch",
+      "model_type": -1
+    },
+    {
+      "id": 32,
+      "name": "cloudVending",
+      "model_type": -1
+    },
+    {
+      "id": 33,
+      "name": "robot_character",
+      "model_type": 0,
+      "allowed_entity_type": [],
+      "allowed_context": [
+        ""
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "RobotConstellation",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "RobotAge",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 2,
+          "name": "RobotHeight",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 3,
+          "name": "RobotWeight",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 4,
+          "name": "RobotBlood",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 5,
+          "name": "RobotBirth",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 6,
+          "name": "RobotGender",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 7,
+          "name": "Specialities",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 8,
+          "name": "FavoriteSports",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 9,
+          "name": "FavoriteStars",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 10,
+          "name": "FavoriteColors",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 11,
+          "name": "SelfIntroduction",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "dance_stop",
+      "model_type": 2,
+      "allowed_entity_type": [],
+      "intents": [
+        {
+          "id": 0,
+          "name": "cloudminds/stop",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "around",
+      "model_type": 2,
+      "allowed_entity_type": [
+        "sys.entity.amap_poi:type",
+        "sys.entity.amap_keyword:keyword_food",
+        "user.entity.position:position:4:4",
+        "sys.entity.noposition:noposition:4:4",
+        "sys.entity.geo_location:keyword_geo_location",
+        "sys.entity.company:keyword_company",
+        "sys.entity.food:keyword_food",
+        "sys.entity.city:keyword_city",
+        "sys.entity.province:keyword_province",
+        "sys.entity.vehicle:keyword_vehicle",
+        "sys.entity.businessbrand:keyword_businessbrand"
+      ],
+      "allowed_entity_type1": [
+        "type",
+        "keyword_food",
+        "position:4:4",
+        "noposition:4:4",
+        "keyword_geo_location",
+        "keyword_company",
+        "keyword_food",
+        "keyword_city",
+        "keyword_province",
+        "keyword_vehicle",
+        "keyword_businessbrand"
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "SearchAround",
+          "enable": true,
+          "slots": [
+            "type",
+            "keyword_food",
+            "keyword_geo_location",
+            "keyword_company",
+            "keyword_city",
+            "keyword_province",
+            "keyword_vehicle",
+            "keyword_businessbrand"
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "hello",
+      "model_type": 0,
+      "allowed_entity_type": [
+        "sys.person_name:person_name"
+      ],
+      "allowed_entity_type1": [
+        "person_name"
+      ],
+      "allowed_context": [
+        ""
+      ],
+      "intents": [
+        {
+          "id": 0,
+          "name": "cloudminds/hello",
+          "rename_domain": "dance_action",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        },
+        {
+          "id": 1,
+          "name": "other",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "repeat",
+      "model_type": 2,
+      "allowed_entity_type": [],
+      "intents": [
+        {
+          "id": 0,
+          "name": "RepeatLast",
+          "enable": true,
+          "slots": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "another",
+      "redirect": -1
+    }
+  ],
+  "multi_domain_info": {
+    "labels": [
+      "not_music",
+      "not_poetry",
+      "not_crosstalk",
+      "not_storytelling",
+      "not_drama",
+      "music",
+      "poetry",
+      "crosstalk",
+      "storytelling",
+      "drama",
+      "quit",
+      "random",
+      "other"
+    ],
+    "ambiguous_domains": [
+      {
+        "id": 2,
+        "entity": [
+          "hotsong",
+          "song",
+          "singer",
+          "song_type"
+        ],
+        "ambiguous_intent_id": 0,
+        "ambiguous_entity": "song"
+      },
+      {
+        "id": 18,
+        "entity": [
+          "drama_performer",
+          "drama_title",
+          "drama_type"
+        ],
+        "ambiguous_intent_id": 0,
+        "ambiguous_entity": "drama_title"
+      },
+      {
+        "id": 11,
+        "entity": [
+          "performer1",
+          "performer2",
+          "title"
+        ],
+        "ambiguous_intent_id": 1,
+        "ambiguous_entity": "title"
+      },
+      {
+        "id": 22,
+        "entity": [
+          "performer",
+          "title"
+        ],
+        "ambiguous_intent_id": 4,
+        "ambiguous_entity": "title"
+      },
+      {
+        "id": 9,
+        "entity": [
+          "title",
+          "authorname"
+        ],
+        "ambiguous_intent_id": 5,
+        "ambiguous_entity": "title"
+      }
+    ]
+  }
+}

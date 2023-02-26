@@ -1,0 +1,7 @@
+.idea/
+venv
+media
+static
+__pycache__
+*initial.py
+*.log
